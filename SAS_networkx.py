@@ -117,7 +117,7 @@ class Graph:
         print(self.edges)
 
     # Do not modify
-    def write_edges_file(self, path="edges.csv")->None:
+    def write_edges_file(self, path="network_data/edges.csv")->None:
         """
         write all edges out as .csv
         :param path: string
@@ -135,7 +135,7 @@ class Graph:
         print("finished writing edges to csv")
 
     # Do not modify
-    def write_nodes_file(self, path="nodes.json")->None:
+    def write_nodes_file(self, path="network_data/nodes.json")->None:
         """
         write all nodes out as .csv
         :param path: string
@@ -189,7 +189,6 @@ class Graph:
         """"
         adds nodes and edges, by depth
         """
-        print(loops)
         # get sim artists
         sim = self.nodes_sim[id]
         # for each similar
@@ -232,14 +231,15 @@ class Graph:
 if __name__ == '__main__':
     graph = Graph()
     
-    num_similar = 10 #number of similar artists to use
+    num_similar = 10
 
     graph.parse_artist_txt("dataset-artist-similarity/LastFM/mb2uri_lastfmapi.txt")
     graph.parse_sim_artist_txt("dataset-artist-similarity/LastFM/lastfmapi_gold.txt", num_similar)
+
     # graph.print_nodes()
     # graph.print_edges()
     # print(graph.total_nodes())
-    # # graph.print_nodes_sim()
+    # graph.print_nodes_sim()
     # graph.write_edges_file()
     # graph.write_nodes_file()
 
@@ -252,45 +252,50 @@ if __name__ == '__main__':
     # graph.add_networkx_depth(id,6)
     # graph.draw_networkx_node(True)
 
-    ### BUILD WHOLE GRAPH
     for x in graph.nodes_sim:
         graph.add_networkx_node(x)
-        # print(graph.nodes_sim[x])
         for sim in graph.nodes_sim[x]:
             graph.add_networkx_edge(x, sim)
 
-    print(len(graph.g.nodes()))
-    print(len(graph.g.edges()))
+    print(f'Number of nodes: {len(graph.g.nodes())}')
+    print(f'Number of edges: {len(graph.g.edges())}')
 
-    ### SHOW SHORTEST PATH BEWTEEN ARTISTS
     artist_1 = 'switchfoot'
     artist_2 = 'taylor swift'
 
-    # ## Isolated Path
-    # result_graph = graph.g.subgraph(nx.shortest_path(graph.g, source=artist_1, target=artist_2))
-    # nx.draw(result_graph, font_weight='bold', with_labels=True)
-    # plt.savefig('subgraph.png')
-    # plt.show()
+    try:
+        path = nx.shortest_path(graph.g, source=artist_1, target=artist_2)
+        print(f'Shortest path between {artist_1} and {artist_2}:')
+        print(path)
+
+        result_graph = graph.g.subgraph(path)
+        nx.draw(result_graph, font_weight='bold', with_labels=True)
+        plt.savefig(f'plots/{artist_1}_to_{artist_2}.png')
+        plt.show()
+
+        plt.figure(figsize=(14,6))
+        pos = nx.spring_layout(graph.g, seed=1234)
+        nx.draw(graph.g, pos, node_color='k', node_size=3, with_labels=False)
+
+        path_edges = list(zip(path, path[1:]))
+        nx.draw_networkx_nodes(graph.g, pos, nodelist=path, node_color='r', node_size=50)
+        nx.draw_networkx_edges(graph.g, pos, edgelist=path_edges, edge_color='r', width=2)
+        
+        labels = {}    
+        for node in graph.g.nodes():
+            if node in path:
+                #set the node name as the key and the label as its value 
+                labels[node] = node
+        nx.draw_networkx_labels(graph.g,pos,labels,font_size=12,font_color='r')
+        
+        plt.savefig(f'plots/{artist_1}_to_{artist_2}_fullNetwork.png')
+        plt.show()
+
+    except nx.NetworkXNoPath:
+        print(f"No path between {artist_1} and {artist_2}")
+    except nx.NodeNotFound as e:
+        print(e)
     
-    ## Whole Network + Path
-    plt.figure(figsize=(14,6)) 
-    pos = nx.spring_layout(graph.g, seed=1234)
-    nx.draw(graph.g,pos,node_color='k',node_size=3,with_labels=False)
-    # draw path in red
-    path = nx.shortest_path(graph.g,source=artist_1,target=artist_2)
-    path_edges = list(zip(path,path[1:]))
-    nx.draw_networkx_nodes(graph.g,pos,nodelist=path,node_color='r',node_size=50)
-    nx.draw_networkx_edges(graph.g,pos,edgelist=path_edges,edge_color='r',width=2)
-    
-    labels = {}    
-    for node in graph.g.nodes():
-        if node in path:
-            #set the node name as the key and the label as its value 
-            labels[node] = node
-    nx.draw_networkx_labels(graph.g,pos,labels,font_size=12,font_color='r')
-    plt.show()
-    
-    print(path)
 
 
     

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Graph Network Visualization</title>
+  <!-- Include D3.js library -->
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <!-- Define CSS styles for nodes, links, labels, and search box -->
+  <style>
+    .node {
+      fill: #3498db;
+      stroke: #fff;
+      stroke-width: 2px;
+    }
+    .link {
+      stroke: #ccc;
+      stroke-width: 1.5px;
+    }
+    .node-label {
+      font-size: 10px;
+      pointer-events: none;
+    }
+    .selected {
+      fill: #e74c3c;
+    }
+    .search-box {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="graph-container">
+  <!-- Add the search box -->
+  <input type="text" id="search-input" class="search-box" placeholder="Search node by name">
+</div>
+
+<script>
+    // Set the width and height of the visualization area
+    var width = 1000;
+    var height = 600;
+
+    // Load nodes and names from files asynchronously
+    Promise.all([
+        d3.text("dataset-artist-similarity/LastFM/lastfmapi_gold.txt"),
+        d3.text("dataset-artist-similarity/LastFM/mb2uri_lastfmapi.txt")
+    ]).then(function (data) {
+        // Process data to create nodes with names
+        var lines = data[0].split('\n');
+        var nodes = lines.map(function (line) {
+            var parts = line.split('\t');
+            return { id: parts[0], name: 'Node ' + parts[0] };
+        });
+
+        // Load names from the new file
+        var namesData = data[1].split('\n');
+        var namesMap = new Map();
+        namesData.forEach(function (line) {
+            var parts = line.split('\t');
+            namesMap.set(parts[0], parts[1]); // ID as key, name as value
+        });
+
+        // Update node names based on matching IDs
+        nodes.forEach(function (node) {
+            var newName = namesMap.get(node.id);
+            if (newName) {
+                node.name = newName;
+            }
+        });console.log(nodes)   
+
+        // Process data to create edges between nodes
+        var edges = lines.flatMap(function (line) {
+            var parts = line.split('\t');
+            var id = parts[0];
+            var relatedIds = parts[1] ? parts[1].split(' ') : [];
+            return relatedIds.filter(relatedId => relatedId > id).map(function (relatedId) {
+                return { source: id, target: relatedId };
+            });
+        });console.log(edges)
+
+        // Create an SVG element for visualization
+        var svg = d3.select("#graph-container")
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height);
+
+        // Add a group (g) element to contain the nodes and links
+        var g = svg.append("g");
+
+        // Apply forces to the simulation for node positioning
+        var simulation = d3.forceSimulation(nodes)
+            .force("link", d3.forceLink().id(function (d) { return d.id; }).links(edges))
+            .force("charge", d3.forceManyBody().strength(-200))
+            .force("center", d3.forceCenter(width / 2, height / 2))
+            .on("end", ticked);
+
+        // Create links between nodes
+        var link = g.selectAll(".link")
+            .data(edges)
+            .enter().append("line")
+            .attr("class", "link");
+
+        // Create nodes as circles
+        var node = g.selectAll(".node")
+            .data(nodes)
+            .enter().append("circle")
+            .attr("class", "node")
+            .attr("r", 10)
+            .on("click", function (event, d) {
+                // Toggle class 'selected' on click
+                d3.select(this).classed("selected", !d3.select(this).classed("selected"));
+            });
+
+        // Create labels for nodes
+        var nodeLabels = g.selectAll(".node-label")
+            .data(nodes)
+            .enter().append("text")
+            .attr("class", "node-label")
+            .attr("dy", -12) // Adjust the label position
+            .text(function (d) { return d.name; });
+
+        // Add zoom and pan behavior to the SVG
+        var zoom = d3.zoom()
+            .scaleExtent([0.1, 100]) // Adjust the scale extent as needed
+            .on("zoom", function () {
+                g.attr("transform", d3.event.transform);
+            });
+        svg.call(zoom);
+
+        // Add functionality to the search box
+        var searchInput = document.getElementById("search-input");
+        searchInput.addEventListener("change", function () {
+            var searchTerm = this.value.toLowerCase();
+
+            // Toggle the selected class based on the search term
+            node.classed("selected", function (d) {
+                return d.name.toLowerCase().includes(searchTerm);
+            });
+
+            // Clear the search input after Enter is pressed
+            searchInput.value = "";
+        }); 
+
+        // Function to update positions of nodes and links after simulation
+        function ticked() {
+            link
+                .attr("x1", function (d) { return d.source.x; })
+                .attr("y1", function (d) { return d.source.y; })
+                .attr("x2", function (d) { return d.target.x; })
+                .attr("y2", function (d) { return d.target.y; });
+
+            node
+                .attr("cx", function (d) { return d.x + 6; })
+                .attr("cy", function (d) { return d.y - 6; });
+
+            // Update node label positions
+            nodeLabels
+                .attr("x", function (d) { return d.x; })
+                .attr("y", function (d) { return d.y; });
+        }
+    });
+</script>
+
+</body>
+</html>

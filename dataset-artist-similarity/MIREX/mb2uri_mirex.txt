@@ -1,0 +1,268 @@
+2386cd66-e923-4e8e-bf14-2eebe2e9b973	3 doors down	http://dbpedia.org/resource/3_Doors_Down
+3d2b98e5-556f-4451-a3ff-c50ea18d57cb	aerosmith	http://dbpedia.org/resource/Aerosmith
+7291957b-c463-4275-a41c-a104c9e2337f	alan jackson	http://dbpedia.org/resource/Alan_Jackson
+4d7928cd-7ed2-4282-8c29-c0c9f966f1bd	alice cooper	http://dbpedia.org/resource/Alice_Cooper
+76bee0a6-10fc-416c-a8fd-d9c91ee9642c	alice deejay	http://dbpedia.org/resource/Alice_Deejay
+57cb4257-9855-4a42-b1be-bfba1d9b520d	andy williams	http://dbpedia.org/resource/Andy_Williams
+cff63c14-b081-4686-9357-eea84d5348fc	anne murray	http://dbpedia.org/resource/Anne_Murray
+f22942a1-6f70-4f48-866e-238cb2308fbd	aphex twin	http://dbpedia.org/resource/Aphex_Twin
+8d835405-44cb-49ea-b223-d5f91e109b22	arthur "big boy" crudup	http://dbpedia.org/resource/Arthur_%22Big_Boy%22_Crudup
+85545102-7c29-4707-aea2-30ff55018df9	artie shaw	http://dbpedia.org/resource/Artie_Shaw
+410c9baf-5469-44f6-9852-826524b80c61	autechre	http://dbpedia.org/resource/Autechre
+dcb03ce3-67a5-4eb3-b2d1-2a12d93a38f3	b.b. king	http://dbpedia.org/resource/B.B._King
+42a19448-ff60-4fd2-9d10-959bf2000729	b.j. thomas	http://dbpedia.org/resource/B._J._Thomas
+0053dbd9-bfbc-4e38-9f08-66a27d914c38	bad company	http://dbpedia.org/resource/Bad_Company
+86e736b4-93e2-40ff-9e1c-fb7c63fef5f6	barenaked ladies	http://dbpedia.org/resource/Barenaked_Ladies
+9beb62b2-88db-4cea-801e-162cd344ee53	beastie boys	http://dbpedia.org/resource/Beastie_Boys
+252b5d32-5bd5-4cae-9d48-6aafa2145c33	bellamy brothers	http://dbpedia.org/resource/Bellamy_Brothers
+25cf5731-bed9-4604-97a4-8b9655de1a30	benny carter	http://dbpedia.org/resource/Benny_Carter
+b09ae88f-4156-4caa-b129-1cacb5e1632e	benny goodman	http://dbpedia.org/resource/Benny_Goodman
+ffa28768-ecda-42c6-ac49-6ce5c7d33043	bessie smith	http://dbpedia.org/resource/Bessie_Smith
+05bc49f8-3108-44c8-82b9-ac3254896a69	big bill broonzy	http://dbpedia.org/resource/Big_Bill_Broonzy
+b123ba15-c4a5-4281-8117-2e57f8f02496	big joe turner	http://dbpedia.org/resource/Big_Joe_Turner
+bf295ac0-21e8-4e11-89e9-22b10fd8973a	big joe williams	http://dbpedia.org/resource/Big_Joe_Williams
+2a2be593-6984-4640-8cf1-717ec7a6e18b	bill monroe	http://dbpedia.org/resource/Bill_Monroe
+d59c4cda-11d9-48db-8bfe-b557ee602aed	billie holiday	http://dbpedia.org/resource/Billie_Holiday
+63e8d6f9-e247-45c9-aaf2-e079cddbdd54	billy ray cyrus	http://dbpedia.org/resource/Billy_Ray_Cyrus
+2437980f-513a-44fc-80f1-b90d9d7fcf8f	bing crosby	http://dbpedia.org/resource/Bing_Crosby
+32286190-da0f-4a85-b3d6-09a84d7e2bbc	bix beiderbecke	http://dbpedia.org/resource/Bix_Beiderbecke
+5182c1d9-c7d2-4dad-afa0-ccfeada921a8	black sabbath	http://dbpedia.org/resource/Black_Sabbath
+d9109c45-ddf6-4481-89ee-d6bee8306db3	blind boy fuller	http://dbpedia.org/resource/Blind_Boy_Fuller
+38c5cdab-5d6d-43d1-85b0-dac41bde186e	blind melon	http://dbpedia.org/resource/Blind_Melon
+8a14c00b-4779-44e4-9b2e-4cc9dcd92e9b	blind willie johnson	http://dbpedia.org/resource/Blind_Willie_Johnson
+81e02e29-e46a-49cb-bf13-d204cbe86daa	blind willie mctell	http://dbpedia.org/resource/Blind_Willie_McTell
+8cecffe6-783a-4aeb-8720-68e46cc5c55d	blu mar ten	http://dbpedia.org/resource/Blu_Mar_Ten
+69158f97-4c07-4c4e-baf8-4e4ab1ed666e	boards of canada	http://dbpedia.org/resource/Boards_of_Canada
+de5cc0b2-e97f-440e-b280-d112d0c09ff5	bob crosby	http://dbpedia.org/resource/Bob_Crosby
+72c536dc-7137-4477-a521-567eeb840fa8	bob dylan	http://dbpedia.org/resource/Bob_Dylan
+c727f585-54e0-4e0d-b8ad-05f216f99244	bob wills	http://dbpedia.org/resource/Bob_Wills
+b7798819-d9b2-442b-bd22-e55b40a1a69f	bobby bare	http://dbpedia.org/resource/Bobby_Bare
+97ebb1b4-1d9c-4303-bb60-074c993e2d53	bobby vee	http://dbpedia.org/resource/Bobby_Vee
+70248960-cb53-4ea4-943a-edb18f7d336f	bruce springsteen	http://dbpedia.org/resource/Bruce_Springsteen
+4dbf5678-7a31-406a-abbe-232f8ac2cd63	bryan adams	http://dbpedia.org/resource/Bryan_Adams
+13cb0fb4-7f7f-4116-a282-905c675c39ef	buck owens	http://dbpedia.org/resource/Buck_Owens
+882af819-887e-4691-a4af-b14613058942	bukka white	http://dbpedia.org/resource/Bukka_White
+10a9ff92-9637-4498-afea-7044b2ab0dc0	busta rhymes	http://dbpedia.org/resource/Busta_Rhymes
+315bd083-892b-4e76-a9f0-91a7408168fc	cab calloway	http://dbpedia.org/resource/Cab_Calloway
+815a0279-558c-4522-ac3b-6a1e259e95b5	canned heat	http://dbpedia.org/resource/Canned_Heat
+8f614665-3418-4ca8-aa6a-737b4636b995	carl cox	http://dbpedia.org/resource/Carl_Cox
+068bd7ab-c38e-4fae-8ed2-cb0c153ed68f	carl perkins	http://dbpedia.org/resource/Carl_Perkins
+29b0a6c7-ab3a-4bf3-a64f-63c8a3548196	carmen mcrae	http://dbpedia.org/resource/Carmen_McRae
+5849fa32-0283-4204-9d1b-507cfaf9d4a2	champion jack dupree	http://dbpedia.org/resource/Champion_Jack_Dupree
+c71b4f57-29da-4bf2-bccb-9dc81cd2d905	charley patton	http://dbpedia.org/resource/Charley_Patton
+da28dc95-f911-4bb3-9863-167c2505a485	charlie barnet	http://dbpedia.org/resource/Charlie_Barnet
+c7356af9-9ea6-4a78-a55b-c73775716312	charlie parker	http://dbpedia.org/resource/Charlie_Parker
+9fb7fe77-4e8b-4cbd-ba8f-84bcd80a24bc	charlie rich	http://dbpedia.org/resource/Charlie_Rich
+8ecae52e-9c89-4b61-99d8-ac11abc26771	chick webb	http://dbpedia.org/resource/Chick_Webb
+f3430779-bbec-437b-944d-1fbf45d2e786	coal chamber	http://dbpedia.org/resource/Coal_Chamber
+cc197bad-dc9c-440d-a5b5-d52ba2e14234	coldplay	http://dbpedia.org/resource/Coldplay
+5c8cb181-38fe-4300-8153-650b2ed0258f	coleman hawkins	http://dbpedia.org/resource/Coleman_Hawkins
+a3c60d26-90d6-4788-ba9b-a89693fc396d	conway twitty	http://dbpedia.org/resource/Conway_Twitty
+cc30e630-8c75-4d78-b205-8e2edc6bdaa7	coolio	http://dbpedia.org/resource/Coolio
+0dbd6300-efdc-420b-857e-895e18fad317	count basie	http://dbpedia.org/resource/Count_Basie
+a0327dc2-dc76-44d5-aec6-47cd2dff1469	counting crows	http://dbpedia.org/resource/Counting_Crows
+109958eb-a335-4c5e-907e-597ff4c6af46	creedence clearwater revival	http://dbpedia.org/resource/Creedence_Clearwater_Revival
+97c30dea-ca61-4efe-be4c-3d56de7900db	culture beat	http://dbpedia.org/resource/Culture_Beat
+51508c1f-8d07-4a00-9cf1-26c570fe7b78	cypress hill	http://dbpedia.org/resource/Cypress_Hill
+056e4f3e-d505-4dad-8ec1-d04f521cbb56	daft punk	http://dbpedia.org/resource/Daft_Punk
+07e748f1-075e-428d-85dc-ce3be434e906	dave matthews band	http://dbpedia.org/resource/Dave_Matthews_Band
+5e6c760b-42e0-4df4-a221-0269355da00a	dean martin	http://dbpedia.org/resource/Dean_Martin
+49d04262-6389-4f51-829e-d8fd1b8b80fa	deana carter	http://dbpedia.org/resource/Deana_Carter
+7249b899-8db8-43e7-9e6e-22f1e736024e	def leppard	http://dbpedia.org/resource/Def_Leppard
+7527f6c2-d762-4b88-b5e2-9244f1e34c46	deftones	http://dbpedia.org/resource/Deftones
+614e3804-7d34-41ba-857f-811bad7c2b7a	dire straits	http://dbpedia.org/resource/Dire_Straits
+4bb4e4e4-5f66-4509-98af-62dbb90c45c5	disturbed	http://dbpedia.org/resource/Disturbed_(band)
+3248ed2d-bada-41b5-a7b6-ac88faa1f1ac	dixie chicks	http://dbpedia.org/resource/Dixie_Chicks
+e9ba8ccb-505f-4e5c-b909-65998d0d35b5	dizzy gillespie	http://dbpedia.org/resource/Dizzy_Gillespie
+9c446bec-9272-4828-a958-9dd43e33cc97	dj funk	http://dbpedia.org/resource/DJ_Funk
+219f8602-c777-4b90-b0e1-90e8faa43891	dj spinna	http://dbpedia.org/resource/DJ_Spinna
+650bf385-6f6d-4992-a3b9-779d144920a4	django reinhardt	http://dbpedia.org/resource/Django_Reinhardt
+f3bf61f8-97d4-4e52-a73d-2ddbbe8196c8	dmx	http://dbpedia.org/resource/DMX_(rapper)
+1d543e07-d0d2-4834-a8db-d65c50c2a856	dolly parton	http://dbpedia.org/resource/Dolly_Parton
+741bd697-e595-4e47-a97d-688b4b9e0df2	don williams	http://dbpedia.org/resource/Don_Williams
+5f6ab597-f57a-40da-be9e-adad48708203	dr. dre	http://dbpedia.org/resource/Dr._Dre
+3af06bc4-68ad-4cae-bb7a-7eeeb45e411f	duke ellington	http://dbpedia.org/resource/Duke_Ellington
+1a1cd7f3-e5df-4eca-bae2-2757c9e656b5	duran duran	http://dbpedia.org/resource/Duran_Duran
+6ee7a715-e0c0-46d0-a215-2e17001699fc	eiffel 65	http://dbpedia.org/resource/Eiffel_65
+54799c0e-eb45-4eea-996d-c4d71a63c499	ella fitzgerald	http://dbpedia.org/resource/Ella_Fitzgerald
+b83bc61f-8451-4a5d-8b8e-7e9ed295e822	elton john	http://dbpedia.org/resource/Elton_John
+01809552-4f87-45b0-afff-2c6f0730a3be	elvis presley	http://dbpedia.org/resource/Elvis_Presley
+b95ce3ff-3d05-4e87-9e01-c97b66af13d4	eminem	http://dbpedia.org/resource/Eminem
+35ef61ca-43db-4772-ba27-0489e9ebcb69	emmylou harris	http://dbpedia.org/resource/Emmylou_Harris
+e22d2f66-881e-41ca-9356-544697ee5f90	etta james	http://dbpedia.org/resource/Etta_James
+3604c99d-c146-4276-aa0c-9376d333aeb8	everclear	http://dbpedia.org/resource/Everclear_(band)
+ca39d50f-9885-420e-88d6-9c3f64038773	everlast	http://dbpedia.org/resource/Everlast_(musician)
+406552d4-5ba1-4226-b7c0-367bc50fc767	faith hill	http://dbpedia.org/resource/Faith_Hill
+b15ebd71-a252-417d-9e1c-3e6863da68f8	faith no more	http://dbpedia.org/resource/Faith_No_More
+5799b78e-a103-427b-8a1d-0bfeaddbb0c0	faron young	http://dbpedia.org/resource/Faron_Young
+34c63966-445c-4613-afe1-4f0e1e53ae9a	fatboy slim	http://dbpedia.org/resource/Fatboy_Slim
+569fc5bf-bcb6-4bc5-9a00-bd0d258e34f1	fats waller	http://dbpedia.org/resource/Fats_Waller
+6ae51665-8261-4ae5-883f-1899651ad31b	filter	http://dbpedia.org/resource/Filter_(band)
+f47d1c94-c3e3-4c84-a42a-6c33e0032839	fletcher henderson	http://dbpedia.org/resource/Fletcher_Henderson
+3c3d3ad8-3935-4c00-affb-768563916f36	fluke	http://dbpedia.org/resource/Fluke_(band)
+67f66c07-6e61-4026-ade5-7e782fad3a5d	foo fighters	http://dbpedia.org/resource/Foo_Fighters
+bb56bf3b-053d-470a-945e-fb6943c03214	frankie laine	http://dbpedia.org/resource/Frankie_Laine
+e2050382-282f-40e5-8f33-01ee4647ad3f	freddy fender	http://dbpedia.org/resource/Freddy_Fender
+b76645c5-78b0-4e4c-8f95-003f40013a45	garth brooks	http://dbpedia.org/resource/Garth_Brooks
+fb23b49b-f964-46d0-a089-ae5e39956321	gene krupa	http://dbpedia.org/resource/Gene_Krupa
+467f69b6-8d6d-4d2c-bfad-e89adf2806ff	george benson	http://dbpedia.org/resource/George_Benson
+f2903be0-79a7-4334-8cc5-e45309482a97	george jones	http://dbpedia.org/resource/George_Jones
+7b353d3c-2bd9-40e3-a21d-b7da3f941339	glenn miller	http://dbpedia.org/resource/Glenn_Miller
+864aa861-e22a-4187-8baa-2ef0c215bc0a	godflesh	http://dbpedia.org/resource/Godflesh
+e21857d5-3256-4547-afb3-4b6ded592596	gorillaz	http://dbpedia.org/resource/Gorillaz
+c8d0d74b-80eb-4746-8cea-f5df78b4b90c	hank locklin	http://dbpedia.org/resource/Hank_Locklin
+906bddec-bc73-49f8-ac1e-eaee691c6cf9	hank williams	http://dbpedia.org/resource/Hank_Williams
+e6b3fe16-d0c5-4825-b33e-a83d8fb5de94	harry james	http://dbpedia.org/resource/Harry_James
+582fee78-d934-4603-9f5c-1729e0ca36b7	helmet	http://dbpedia.org/resource/Helmet_(band)
+c2d6a6fb-7999-4bb3-b2df-7d752fdf4e95	house of pain	http://dbpedia.org/resource/House_of_Pain
+ca5b38c2-f39d-45a4-ad3d-daf4448846ef	howlin' wolf	http://dbpedia.org/resource/Howlin'_Wolf
+1d11e2a1-4531-4d61-a8c7-7b5c6a608fd2	ice cube	http://dbpedia.org/resource/Ice_Cube
+16b97aaa-d7c0-469f-8c97-47c705b2d02f	ils	http://dbpedia.org/resource/Ils_(producer)
+a4dc6e1b-966e-4e93-99e5-83e6714fde6e	invisible	http://dbpedia.org/resource/Invisible_(band)
+ca891d65-d9b0-4258-89f7-e6ba29d83767	iron maiden	http://dbpedia.org/resource/Iron_Maiden
+b504f625-4ef6-4a5a-81e8-870a61e8dc9c	ja rule	http://dbpedia.org/resource/Ja_Rule
+79dcf09e-2290-4740-9edc-907f82420160	jack teagarden	http://dbpedia.org/resource/Jack_Teagarden
+54f855b3-e958-46c3-973d-d4536250a652	jamie o'neal	http://dbpedia.org/resource/Jamie_O'Neal
+f82bcf78-5b69-4622-a5ef-73800768d9ac	jay-z	http://dbpedia.org/resource/Jay-Z
+3d094919-071f-4070-95dc-e1f350e4a5f3	jelly roll morton	http://dbpedia.org/resource/Jelly_Roll_Morton
+7fe3dca3-d04b-469a-9825-19dffae80ecd	jessica andrews	http://dbpedia.org/resource/Jessica_Andrews
+2c05faf7-5cc8-4476-9daa-d177ad75cd34	jim reeves	http://dbpedia.org/resource/Jim_Reeves
+bea5831a-fa7f-4316-9d71-754e390556b8	jimmie lunceford	http://dbpedia.org/resource/Jimmie_Lunceford
+394492c0-cecf-40a8-b676-0e5706317fab	jimmie rodgers	http://dbpedia.org/resource/Jimmie_Rodgers_(country_singer)
+3b6956ed-37d2-4436-bf09-de901f0101e9	jimmy dorsey	http://dbpedia.org/resource/Jimmy_Dorsey
+018d8a5e-76c7-450d-a0a1-a97f8c26466f	jimmy reed	http://dbpedia.org/resource/Jimmy_Reed
+5330d6d0-711b-415b-93e4-071e46d0d5f2	joey beltram	http://dbpedia.org/resource/Joey_Beltram
+b0122194-c49a-46a1-ade7-84d1d76bd8e9	john lee hooker	http://dbpedia.org/resource/John_Lee_Hooker
+d43d12a1-2dc9-4257-a2fd-0a3bb1081b86	johnny cash	http://dbpedia.org/resource/Johnny_Cash
+fae7b17e-03e9-44ea-9734-f4ed92246f9f	johnny paycheck	http://dbpedia.org/resource/Johnny_Paycheck
+ce3bc975-a76f-415b-a6cd-1e568c5714dd	jungle brothers	http://dbpedia.org/resource/Jungle_Brothers
+ba9afaf0-ef3a-42a6-afe0-f924193629bb	juvenile	http://dbpedia.org/resource/Juvenile_(rapper)
+f29443f1-5712-4be7-a926-1bde47a1d71d	kathy mattea	http://dbpedia.org/resource/Kathy_Mattea
+5dca4d22-d6c8-4e70-8ca1-4543e43353c7	kenny chesney	http://dbpedia.org/resource/Kenny_Chesney
+4cd556a5-db82-43f6-8d55-99598b42da8f	kenny g	http://dbpedia.org/resource/Kenny_G
+c3d14b41-a48d-488f-bfed-ce0597bb0b1f	kenny rogers	http://dbpedia.org/resource/Kenny_Rogers
+5a5eeab3-e4b7-42e9-8ae9-b90eeb210b96	kitty wells	http://dbpedia.org/resource/Kitty_Wells
+ddcfbdcf-cf8d-4776-8a69-10f39376b5a2	leadbelly	http://dbpedia.org/resource/Lead_Belly
+369fbad4-6fa4-4dae-9842-a69826cd359d	leftfield	http://dbpedia.org/resource/Leftfield
+0031bc7a-1b6f-4620-99db-5202405b0749	lena horne	http://dbpedia.org/resource/Lena_Horne
+3ffc8b31-cfe8-44c9-aa2e-e82d3355e9b3	les brown	http://dbpedia.org/resource/Les_Brown_(bandleader)
+251541e9-4212-4350-99f0-d347a055cda6	lil' keke	http://dbpedia.org/resource/Lil'_Keke
+17cf2413-99c1-441d-ba92-700e811daf56	lionel hampton	http://dbpedia.org/resource/Lionel_Hampton
+a4dd0e77-83b8-4e92-89b7-effb0e47fd8c	ll cool j	http://dbpedia.org/resource/LL_Cool_J
+dbfd61ef-fce1-4803-9f18-7bfdd3996508	lonnie johnson	http://dbpedia.org/resource/Lonnie_Johnson
+613260c3-d620-4645-94cd-33cd55f29b1e	loretta lynn	http://dbpedia.org/resource/Loretta_Lynn
+eea8a864-fcda-4602-9569-38ab446decd6	louis armstrong	http://dbpedia.org/resource/Louis_Armstrong
+df9483e8-e037-450e-bcc4-6e9c280a4f73	lowell fulson	http://dbpedia.org/resource/Lowell_Fulson
+28c1b7b7-355a-48b1-b2c4-75b8eb8080ef	ltj bukem	http://dbpedia.org/resource/LTJ_Bukem
+0638ba22-040f-438d-83a5-9b670c4adaf5	ludacris	http://dbpedia.org/resource/Ludacris
+354812d4-2dfb-4611-9a8f-8f8e795e48bf	lynn anderson	http://dbpedia.org/resource/Lynn_Anderson
+c544ed4d-2390-4442-a83e-1ea2883b09c8	lynyrd skynyrd	http://dbpedia.org/resource/Lynyrd_Skynyrd
+e1deae56-c8f0-4e73-8264-f4b02dfc051c	ma rainey	http://dbpedia.org/resource/Ma_Rainey
+5dfdca28-9ddc-4853-933c-8bc97d87beec	marilyn manson	http://dbpedia.org/resource/Marilyn_Manson
+6e60deeb-a666-42c5-95cb-a5eada6bbbe5	marilyn monroe	http://dbpedia.org/resource/Marilyn_Monroe
+4439c2fd-a754-4f6a-b3a6-791b47726156	mel tormé	http://dbpedia.org/resource/Mel_Torm%C3%A9
+e4cfb284-9ab1-47f0-a725-082f84275a16	memphis slim	http://dbpedia.org/resource/Memphis_Slim
+65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab	metallica	http://dbpedia.org/resource/Metallica
+dec629c1-c5b8-4fa1-9bb2-eaf979550f41	mint royale	http://dbpedia.org/resource/Mint_Royale
+802484e0-90de-4611-9fa4-f5ef0c7727b6	mississippi john hurt	http://dbpedia.org/resource/Mississippi_John_Hurt
+32a92586-6f9f-4882-b168-97fd60a99b6d	moby	http://dbpedia.org/resource/Moby
+cc1f4763-a306-4ae7-8ba7-331872199f9e	montell jordan	http://dbpedia.org/resource/Montell_Jordan
+067102ea-9519-4622-9077-57ca4164cfbb	morcheeba	http://dbpedia.org/resource/Morcheeba
+f1c8da15-b408-4149-b863-f1cbe9971f19	mudvayne	http://dbpedia.org/resource/Mudvayne
+1cfe52d7-181a-4b3a-8041-d8bf9ccef57b	mystikal	http://dbpedia.org/resource/Mystikal
+d232422e-3c62-477e-8c33-abdf405de380	märtini brös	http://dbpedia.org/resource/M%C3%A4rtini_Br%C3%B6s
+fbe054ec-a143-4101-9e9e-64abc5ff5ac9	nat king cole	http://dbpedia.org/resource/Nat_King_Cole
+811900b2-68fc-4d41-8bad-69b7a1f4d628	nelly	http://dbpedia.org/resource/Nelly
+b7ffd2af-418f-4be2-bdd1-22f8b48613da	nine inch nails	http://dbpedia.org/resource/Nine_Inch_Nails
+5b11f4ce-a62d-471e-81fc-a69a8278c7da	nirvana	http://dbpedia.org/resource/Nirvana_(band)
+f3e2a7d9-c6bb-4848-95e5-04c0a1e2f511	orbital	http://dbpedia.org/resource/Orbital_(band)
+5bb2a9c8-3505-4c45-9717-19f0f8f35425	orgy	http://dbpedia.org/resource/Orgy_(band)
+6e3d6e70-2f11-4732-a789-4a9d608ef24a	original dixieland jazz band	http://dbpedia.org/resource/Original_Dixieland_Jass_Band
+33287d3b-d615-48ed-bdec-c6d941ea575f	orphanage	http://dbpedia.org/resource/Orphanage_(band)
+73fdb566-a9b1-494c-9f32-51768ec9fd27	outkast	http://dbpedia.org/resource/OutKast
+8aa5b65a-5b3c-4029-92bf-47a544356934	ozzy osbourne	http://dbpedia.org/resource/Ozzy_Osbourne
+c5eb9407-caeb-4303-b383-6929aa94021c	papa roach	http://dbpedia.org/resource/Papa_Roach
+ad82dd72-0df3-4a09-8d7a-1af9c9e80522	patsy cline	http://dbpedia.org/resource/Patsy_Cline
+092ca127-2e07-4cbd-9cba-e412b4ddddd9	paul van dyk	http://dbpedia.org/resource/Paul_van_Dyk
+5a2463af-eef0-4a22-bc8f-5865fbe9c78e	peggy lee	http://dbpedia.org/resource/Peggy_Lee
+2095b935-2007-4ae0-a48a-ef4d6fc3aac0	photek	http://dbpedia.org/resource/Photek
+83d91898-7763-47d7-b03b-b92132375c47	pink floyd	http://dbpedia.org/resource/Pink_Floyd
+abee98f6-5239-4abf-bbe6-e1e2815a0dd6	plastikman	http://dbpedia.org/resource/Richie_Hawtin
+e74d6546-7d69-43aa-9580-51a80cd9ae54	pop will eat itself	http://dbpedia.org/resource/Pop_Will_Eat_Itself
+36ae137b-1e86-4ee3-8932-3eb312cfa714	porter	http://dbpedia.org/resource/Porter_(band)
+942123a3-df28-463f-9f6e-202b69b8e253	porter wagoner	http://dbpedia.org/resource/Porter_Wagoner
+cbaafb20-eb74-421a-85f1-2bb6341aad23	propellerheads	http://dbpedia.org/resource/Propellerheads
+049e3c43-9c6e-491f-9fe3-4f8003afc224	puff daddy	http://dbpedia.org/resource/Sean_Combs
+0383dadf-2a4e-4d10-a46a-e9e041da8eb3	queen	http://dbpedia.org/resource/Queen_(band)
+5803c81e-739a-4057-9a5c-cf84e55db630	quincy jones	http://dbpedia.org/resource/Quincy_Jones
+ea4dfa26-f633-4da6-a52a-f49ea4897b58	r.e.m.	http://dbpedia.org/resource/R.E.M.
+a74b1b7f-71a5-4011-9441-d0b5e4122711	radiohead	http://dbpedia.org/resource/Radiohead
+3798b104-01cb-484c-a3b0-56adc6399b80	rage against the machine	http://dbpedia.org/resource/Rage_Against_the_Machine
+484cabf9-4ded-4498-9444-e58251b9bba3	rahzel	http://dbpedia.org/resource/Rahzel
+845adb53-9281-41ff-a911-c0af49f3c943	ralph stanley	http://dbpedia.org/resource/Ralph_Stanley
+b2d122f9-eadb-4930-a196-8f221eeb0c66	rammstein	http://dbpedia.org/resource/Rammstein
+ac928049-75d0-4a1a-8c80-3e3a35a3d68e	rasco	http://dbpedia.org/resource/Rasco
+2ce02909-598b-44ef-a456-151ba0a3bd70	ray charles	http://dbpedia.org/resource/Ray_Charles
+64585ad9-a908-422f-b675-8ab7386d5164	rednex	http://dbpedia.org/resource/Rednex
+b9a8c773-973b-4a0f-8f4e-c21775abf4c5	rob swift	http://dbpedia.org/resource/Rob_Swift
+c1b33d24-743b-4a5a-8c5c-63b3362cee6e	robert johnson	http://dbpedia.org/resource/Robert_Johnson
+a35237a0-4f47-40a6-b6f3-1e786db23402	rod stewart	http://dbpedia.org/resource/Rod_Stewart
+0bbbc496-c7b5-4b3f-bb6d-bd312827d6e5	roy orbison	http://dbpedia.org/resource/Roy_Orbison
+4bc9e8c3-7eae-454f-a56c-bccf96f3926b	sammy davis jr.	http://dbpedia.org/resource/Sammy_Davis,_Jr.
+351d8bdf-33a1-45e2-8c04-c85fad20da55	sarah vaughan	http://dbpedia.org/resource/Sarah_Vaughan
+c3cceeed-3332-4cf0-8c4c-bbde425147b6	scorpions	http://dbpedia.org/resource/Scorpions_(band)
+aec8a328-d2e8-4780-b2ea-318c7f8d6f75	scott joplin	http://dbpedia.org/resource/Scott_Joplin
+a962a2a7-07c9-4544-8d1f-a506016674d8	seba	http://dbpedia.org/resource/Seba_(musician)
+faabb55d-3c9e-4c23-8779-732ac2ee2c0d	shania twain	http://dbpedia.org/resource/Shania_Twain
+166c939c-a97e-44b9-b405-23d49a72df4e	shedaisy	http://dbpedia.org/resource/SHeDAISY
+bf1b23ea-9b76-42cf-a5f6-4a691e81af5e	sidney bechet	http://dbpedia.org/resource/Sidney_Bechet
+f205743d-4441-471d-a3af-66f584738e29	skip james	http://dbpedia.org/resource/Skip_James
+3bef5827-7f0e-4011-8f3c-50cf29bb187e	sleepy john estes	http://dbpedia.org/resource/Sleepy_John_Estes
+8c87dda0-be58-4e48-a3b5-2626f26364c7	son house	http://dbpedia.org/resource/Son_House
+3e07fca6-2c7f-4fc1-a138-ec6cd7e4be8a	sonny terry	http://dbpedia.org/resource/Sonny_Terry
+b10db9ad-b4c3-47f3-a7a4-37864b134f65	soul asylum	http://dbpedia.org/resource/Soul_Asylum
+153c9281-268f-4cf3-8938-f5a4593e5df4	soundgarden	http://dbpedia.org/resource/Soundgarden
+73764092-6736-49f7-992f-bda135d07356	source direct	http://dbpedia.org/resource/Source_Direct_(band)
+c622e2eb-dd68-44d7-b01e-bde489c16713	spineshank	http://dbpedia.org/resource/Spineshank
+4d86ad4e-28d8-4e9f-8cf4-735c57060fdc	squarepusher	http://dbpedia.org/resource/Squarepusher
+f19ce47e-2ceb-484c-9c4d-c04dcc7aff7e	stan kenton	http://dbpedia.org/resource/Stan_Kenton
+7944ed53-2a58-4035-9b93-140a71e41c34	sting	http://dbpedia.org/resource/Sting_(musician)
+e9e2a634-984f-4c10-bf7b-7970179e1ef1	suicidal tendencies	http://dbpedia.org/resource/Suicidal_Tendencies
+26fe36eb-fd75-4799-bf0f-fa502a7bcfe8	tammy wynette	http://dbpedia.org/resource/Tammy_Wynette
+1b62df85-00d2-464f-81bc-a5c0cdcad278	tampa red	http://dbpedia.org/resource/Tampa_Red
+45677914-89de-4267-aeae-8c1661b2c859	tanya tucker	http://dbpedia.org/resource/Tanya_Tucker
+2e89725a-ac85-414c-b3b2-70f0a82fae9a	teddy wilson	http://dbpedia.org/resource/Teddy_Wilson
+ebfc1398-8d96-47e3-82c3-f782abcdb13d	the beach boys	http://dbpedia.org/resource/The_Beach_Boys
+b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d	the beatles	http://dbpedia.org/resource/The_Beatles
+1946a82a-f927-40c2-8235-38d64f50d043	the chemical brothers	http://dbpedia.org/resource/The_Chemical_Brothers
+9efff43b-3b29-4082-824e-bc82f646f93d	the doors	http://dbpedia.org/resource/The_Doors
+091ec508-877f-4e3c-92a3-10903bbbc7ad	the everly brothers	http://dbpedia.org/resource/The_Everly_Brothers
+a1419808-65d3-4d40-998c-1a0bac65eabc	the faint	http://dbpedia.org/resource/The_Faint
+a1d77dd4-8728-4a47-bdfa-9663d791139c	the future sound of london	http://dbpedia.org/resource/The_Future_Sound_of_London
+78977492-5888-4c7a-92b3-95293e90a653	the kingston trio	http://dbpedia.org/resource/The_Kingston_Trio
+4a4ee089-93b1-4470-af9a-6ff575d32704	the prodigy	http://dbpedia.org/resource/The_Prodigy
+b071f9fa-14b0-4217-8e97-eb41da73f598	the rolling stones	http://dbpedia.org/resource/The_Rolling_Stones
+92a42e82-b36f-4308-82c1-68bad2e03c89	third eye blind	http://dbpedia.org/resource/Third_Eye_Blind
+7e5cfc9a-e9e1-46f1-b81a-861b12049488	tim mcgraw	http://dbpedia.org/resource/Tim_McGraw
+9072df14-b61e-42e2-b4f4-6bbb7fdb5586	tina turner	http://dbpedia.org/resource/Tina_Turner
+2f951906-5629-4fef-a260-5033151c162a	toby keith	http://dbpedia.org/resource/Toby_Keith
+5ca3f318-d028-4151-ac73-78e2b2d6cdcc	tom petty	http://dbpedia.org/resource/Tom_Petty
+b1cfd018-b393-4632-babc-8a343edb4baa	tommy dorsey	http://dbpedia.org/resource/Tommy_Dorsey
+8be0594f-8c13-46bb-ab06-f93ffba5c776	tony bennett	http://dbpedia.org/resource/Tony_Bennett
+66fc5bf8-daa4-4241-b378-9bc9077939d2	tool	http://dbpedia.org/resource/Tool_(band)
+344c7977-1c4b-4010-a0f7-27d9506301ec	total science	http://dbpedia.org/resource/Total_Science
+93e747b8-2896-439d-8c46-29158e8cff90	toy-box	http://dbpedia.org/resource/Toy-Box
+0bc858a1-3573-4216-9423-c96dd8c72919	twista	http://dbpedia.org/resource/Twista
+a3cb23fc-acd3-4ce0-8f36-1e5aa6a18432	u2	http://dbpedia.org/resource/U2
+ba2f4f3b-0293-4bc8-bb94-2f73b5207343	underworld	http://dbpedia.org/resource/Underworld_(band)
+b665b768-0d83-4363-950c-31ed39317c15	van halen	http://dbpedia.org/resource/Van_Halen
+2d5583be-aafd-41ec-addd-df85913855ef	vanilla ice	http://dbpedia.org/resource/Vanilla_Ice
+2aab61bc-67f4-4722-8c6e-e1821b2e32a6	violent femmes	http://dbpedia.org/resource/Violent_Femmes
+550fbe01-42e9-4006-bcd0-6a1854dceb8f	wanda jackson	http://dbpedia.org/resource/Wanda_Jackson
+1a46826b-4d73-4e04-8590-f36c9d832f9e	waylon jennings	http://dbpedia.org/resource/Waylon_Jennings
+cfe572bf-840f-4bed-934a-f69f4b1e90d4	white zombie	http://dbpedia.org/resource/White_Zombie_(band)
+668fd73c-bf54-4310-a139-305517f05311	willie nelson	http://dbpedia.org/resource/Willie_Nelson
+73bb2ece-7ef7-4ee9-b3a0-bffe0b481bb0	woody herman	http://dbpedia.org/resource/Woody_Herman
+4f29ecd7-21a5-4c03-b9ba-d0cfe9488f8c	wyclef jean	http://dbpedia.org/resource/Wyclef_Jean
+a81259a0-a2f5-464b-866e-71220f2739f1	zz top	http://dbpedia.org/resource/ZZ_Top
+aae5b930-c59c-4509-81a1-4e65e8f424e4	µ-ziq	http://dbpedia.org/resource/Mike_Paradinas

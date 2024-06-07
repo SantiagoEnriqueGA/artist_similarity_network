@@ -3,7 +3,7 @@ from collections import defaultdict
 import networkx as nx
 import matplotlib.pyplot as plt
 import json 
-
+import plotly.graph_objects as go
 
 class Graph:
     def __init__(self, with_nodes_file=None, with_edges_file=None):
@@ -225,13 +225,130 @@ class Graph:
         plt.show()
 
         return
+    
+    def draw_plotly_network(self, path=None):
+        """
+        Draws an interactive plot of the network using Plotly.
 
+        This function uses Plotly to create an interactive visualization of the network graph.
+        It displays nodes and edges with a spring layout, allowing for zooming and panning.
 
+        Parameters:
+        path (list): Optional. List of nodes representing the shortest path to highlight.
+        """
+        # Calculate node positions using a spring layout
+        pos = nx.spring_layout(self.g, seed=1234)
+
+        # Initialize lists to hold edge coordinates
+        edge_x = []
+        edge_y = []
+        path_edge_x = []
+        path_edge_y = []
+
+        # Create a set of edges in the path for easy lookup
+        path_edges = set(zip(path, path[1:])) if path else set()
+
+        # Extract the x and y coordinates for edges
+        for edge in self.g.edges():
+            x0, y0 = pos[edge[0]]
+            x1, y1 = pos[edge[1]]
+            if edge in path_edges or (edge[1], edge[0]) in path_edges:
+                path_edge_x.extend([x0, x1, None])
+                path_edge_y.extend([y0, y1, None])
+            else:
+                edge_x.extend([x0, x1, None])
+                edge_y.extend([y0, y1, None])
+
+        # Create a Plotly scatter trace for non-path edges
+        edge_trace = go.Scatter(
+            x=edge_x, y=edge_y,
+            line=dict(width=0.5, color='#888'),
+            hoverinfo='none',
+            mode='lines'
+        )
+
+        # Create a Plotly scatter trace for path edges
+        path_edge_trace = go.Scatter(
+            x=path_edge_x, y=path_edge_y,
+            line=dict(width=2, color='red'),  # Increase width for path edges
+            hoverinfo='none',
+            mode='lines'
+        )
+
+        # Initialize lists to hold node coordinates and text
+        node_x = []
+        node_y = []
+        node_text = []
+        node_text_hover = []
+        node_color = []
+        node_size = []
+
+        # Set default color and highlight path nodes
+        for node in self.g.nodes():
+            x, y = pos[node]
+            node_x.append(x)
+            node_y.append(y)
+            if path and node in path:
+                node_text.append(node)  # Add label only for path nodes
+                node_text_hover.append(node)  # Add label only for path nodes
+                node_color.append('red')
+                node_size.append(15)  # Increase size for path nodes
+            else:
+                node_text.append('')  # No label for other nodes
+                node_text_hover.append(node)  # Add label only for path nodes
+                node_color.append('black')
+                node_size.append(7.5)  # Default size for other nodes
+
+        # Create a Plotly scatter trace for nodes
+        node_trace = go.Scatter(
+            x=node_x, y=node_y,
+            mode='markers+text',  # Add text mode to display labels
+            hoverinfo='text',
+            marker=dict(
+                showscale=False,  # Show color scale
+                colorscale='YlGnBu',  # Color scale
+                color=node_color,  # Set node color
+                size=node_size,  # Set node size
+                line=dict(width=0),  # Remove white outline around nodes
+                # colorbar=dict(
+                #     thickness=15,
+                #     title='Node Connections',
+                #     xanchor='left',
+                #     titleside='right'
+                # ),
+            ),
+            text=node_text,  # Text labels for nodes
+            hovertext=node_text_hover,  # Hover text labels for nodes
+            textposition='top center',  # Position labels at the top center
+            textfont=dict(color='red')  # Color labels red
+        )
+
+        # Create a Plotly figure with the node and edge traces
+        fig = go.Figure(data=[edge_trace, path_edge_trace, node_trace],
+                        layout=go.Layout(
+                            title='Artist Similarity Network',  # Title of the graph
+                            titlefont_size=16,
+                            showlegend=False,
+                            hovermode='closest',
+                            margin=dict(b=20, l=5, r=5, t=40),  # Margins
+                            annotations=[dict(
+                                text="Artist Similarity Network",
+                                showarrow=False,
+                                xref="paper", yref="paper",
+                                x=0.005, y=-0.002
+                            )],
+                            xaxis=dict(showgrid=False, zeroline=False, showticklabels=False),  # Hide x-axis grid, line, and ticks
+                            yaxis=dict(showgrid=False, zeroline=False, showticklabels=False)   # Hide y-axis grid, line, and ticks
+                        )
+        )
+
+        # Display the interactive Plotly figure
+        fig.show()
 
 if __name__ == '__main__':
     graph = Graph()
     
-    num_similar = 10
+    num_similar = 5
 
     graph.parse_artist_txt("dataset-artist-similarity/LastFM/mb2uri_lastfmapi.txt")
     graph.parse_sim_artist_txt("dataset-artist-similarity/LastFM/lastfmapi_gold.txt", num_similar)
@@ -268,13 +385,15 @@ if __name__ == '__main__':
         print(f'Shortest path between {artist_1} and {artist_2}:')
         print(path)
 
+        # Plot just path
         result_graph = graph.g.subgraph(path)
         nx.draw(result_graph, font_weight='bold', with_labels=True)
         plt.savefig(f'plots/{artist_1}_to_{artist_2}.png')
         plt.show()
 
+        # Plot path on network
         plt.figure(figsize=(14,6))
-        pos = nx.spring_layout(graph.g, seed=1234)
+        pos = nx.spring_layout(graph.g, seed=123)
         nx.draw(graph.g, pos, node_color='k', node_size=3, with_labels=False)
 
         path_edges = list(zip(path, path[1:]))
@@ -291,16 +410,11 @@ if __name__ == '__main__':
         plt.savefig(f'plots/{artist_1}_to_{artist_2}_fullNetwork.png')
         plt.show()
 
+        # Plotly visualization path on network
+        graph.draw_plotly_network(path=path)
+
+
     except nx.NetworkXNoPath:
         print(f"No path between {artist_1} and {artist_2}")
     except nx.NodeNotFound as e:
         print(e)
-    
-
-
-    
-
-
-
-    
-    

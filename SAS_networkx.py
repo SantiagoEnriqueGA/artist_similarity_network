@@ -1,5 +1,5 @@
 import csv
-from collections import defaultdict
+from collections import deque, defaultdict
 import networkx as nx
 import matplotlib.pyplot as plt
 import json 
@@ -225,7 +225,7 @@ class Graph:
         plt.show()
 
         return
-    
+      
     def draw_plotly_network(self, path=None):
         """
         Draws an interactive plot of the network using Plotly.
@@ -345,6 +345,38 @@ class Graph:
         # Display the interactive Plotly figure
         fig.show()
 
+    def find_nodes_with_furthest_connectivity(self):
+        """
+        Find nodes with the furthest connectivity.
+
+        This function calculates the nodes with the most significant number of connections 
+        between them on the shortest path.
+
+        Returns:
+        list: List of nodes with furthest connectivity.
+        """
+        max_connectivity = 0
+        furthest_nodes = []
+
+        # Perform BFS starting from each node to find shortest paths
+        for node in self.g.nodes():
+            visited = {node}
+            queue = deque([(node, 0)])  # Initialize queue with the node and its distance
+            while queue:
+                current, distance = queue.popleft()
+                for neighbor in self.g.neighbors(current):
+                    if neighbor not in visited:
+                        visited.add(neighbor)
+                        queue.append((neighbor, distance + 1))
+                        # Check if the current distance is the maximum connectivity found so far
+                        if distance + 1 > max_connectivity:
+                            max_connectivity = distance + 1
+                            furthest_nodes = [(node, neighbor)]  # Start new list
+                        elif distance + 1 == max_connectivity:
+                            furthest_nodes.append((node, neighbor))  # Add to existing list
+
+        return furthest_nodes, max_connectivity
+
 if __name__ == '__main__':
     graph = Graph()
     
@@ -379,7 +411,16 @@ if __name__ == '__main__':
 
     artist_1 = 'switchfoot'
     artist_2 = 'taylor swift'
+    
 
+    # Finds longest connections
+    furthest_nodes, max_connectivity = graph.find_nodes_with_furthest_connectivity()
+    print(f"Furthest nodes: {furthest_nodes}")
+    print(f"Max connectivity: {max_connectivity}")
+
+    artist_1 = 'adnan sami'
+    artist_2 = 'e-40'
+    
     try:
         path = nx.shortest_path(graph.g, source=artist_1, target=artist_2)
         print(f'Shortest path between {artist_1} and {artist_2}:')

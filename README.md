@@ -62,6 +62,11 @@ graph.draw_plotly_network(path=shortest_path)
 
 For detailed usage and additional functionalities, refer to the comments and docstrings within `SAS_networkx.py`.
 
+### Example Plots
+
+![alt text]([https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true](https://github.com/SantiagoEnriqueGA/artist_similarity_network/blob/main/plots/adnan%20sami_to_e-40_plotly.png))
+
+
 ## SAS_D3.html
 
 This HTML file (`SAS_D3.html`) provides a visualization of the artist similarity network using D3.js. It loads data asynchronously, creates nodes and edges, and allows for interactive exploration of the network.

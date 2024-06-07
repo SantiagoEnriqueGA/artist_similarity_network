@@ -245,6 +245,9 @@ class Graph:
         path_edge_x = []
         path_edge_y = []
 
+        artist_1 = path[0]
+        artist_2 = path[-1]
+
         # Create a set of edges in the path for easy lookup
         path_edges = set(zip(path, path[1:])) if path else set()
 
@@ -332,7 +335,7 @@ class Graph:
                             hovermode='closest',
                             margin=dict(b=20, l=5, r=5, t=40),  # Margins
                             annotations=[dict(
-                                text="Artist Similarity Network",
+                                text=f"Shortest path from {artist_1} to {artist_2}",
                                 showarrow=False,
                                 xref="paper", yref="paper",
                                 x=0.005, y=-0.002
@@ -412,15 +415,14 @@ if __name__ == '__main__':
     artist_1 = 'switchfoot'
     artist_2 = 'taylor swift'
     
-
     # Finds longest connections
     furthest_nodes, max_connectivity = graph.find_nodes_with_furthest_connectivity()
     print(f"Furthest nodes: {furthest_nodes}")
     print(f"Max connectivity: {max_connectivity}")
 
-    artist_1 = 'adnan sami'
-    artist_2 = 'e-40'
-    
+    artist_1 = 'e-40'
+    artist_2 = 'adnan sami'
+
     try:
         path = nx.shortest_path(graph.g, source=artist_1, target=artist_2)
         print(f'Shortest path between {artist_1} and {artist_2}:')

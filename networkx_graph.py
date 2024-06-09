@@ -4,6 +4,8 @@ import networkx as nx
 import matplotlib.pyplot as plt
 import json 
 import plotly.graph_objects as go
+import plotly.express as px
+import community as community_louvain 
 
 class Graph:
     def __init__(self, with_nodes_file=None, with_edges_file=None):
@@ -225,7 +227,39 @@ class Graph:
         plt.show()
 
         return
-      
+
+    def find_nodes_with_furthest_connectivity(self):
+        """
+        Find nodes with the furthest connectivity.
+
+        This function calculates the nodes with the most significant number of connections 
+        between them on the shortest path.
+
+        Returns:
+        list: List of nodes with furthest connectivity.
+        """
+        max_connectivity = 0
+        furthest_nodes = []
+
+        # Perform BFS starting from each node to find shortest paths
+        for node in self.g.nodes():
+            visited = {node}
+            queue = deque([(node, 0)])  # Initialize queue with the node and its distance
+            while queue:
+                current, distance = queue.popleft()
+                for neighbor in self.g.neighbors(current):
+                    if neighbor not in visited:
+                        visited.add(neighbor)
+                        queue.append((neighbor, distance + 1))
+                        # Check if the current distance is the maximum connectivity found so far
+                        if distance + 1 > max_connectivity:
+                            max_connectivity = distance + 1
+                            furthest_nodes = [(node, neighbor)]  # Start new list
+                        elif distance + 1 == max_connectivity:
+                            furthest_nodes.append((node, neighbor))  # Add to existing list
+
+        return furthest_nodes, max_connectivity
+    
     def draw_plotly_network(self, path=None):
         """
         Draws an interactive plot of the network using Plotly.
@@ -238,15 +272,16 @@ class Graph:
         """
         # Calculate node positions using a spring layout
         pos = nx.spring_layout(self.g, seed=1234)
-
+        
         # Initialize lists to hold edge coordinates
         edge_x = []
         edge_y = []
         path_edge_x = []
         path_edge_y = []
 
-        artist_1 = path[0]
-        artist_2 = path[-1]
+        if path:
+            artist_1 = path[0]
+            artist_2 = path[-1]
 
         # Create a set of edges in the path for easy lookup
         path_edges = set(zip(path, path[1:])) if path else set()
@@ -313,12 +348,6 @@ class Graph:
                 color=node_color,  # Set node color
                 size=node_size,  # Set node size
                 line=dict(width=0),  # Remove white outline around nodes
-                # colorbar=dict(
-                #     thickness=15,
-                #     title='Node Connections',
-                #     xanchor='left',
-                #     titleside='right'
-                # ),
             ),
             text=node_text,  # Text labels for nodes
             hovertext=node_text_hover,  # Hover text labels for nodes
@@ -327,6 +356,8 @@ class Graph:
         )
 
         # Create a Plotly figure with the node and edge traces
+        if path: subtitle=f"Shortest path from {artist_1} to {artist_2}"
+        else:    subtitle=""
         fig = go.Figure(data=[edge_trace, path_edge_trace, node_trace],
                         layout=go.Layout(
                             title='Artist Similarity Network',  # Title of the graph
@@ -335,7 +366,7 @@ class Graph:
                             hovermode='closest',
                             margin=dict(b=20, l=5, r=5, t=40),  # Margins
                             annotations=[dict(
-                                text=f"Shortest path from {artist_1} to {artist_2}",
+                                text=subtitle,
                                 showarrow=False,
                                 xref="paper", yref="paper",
                                 x=0.005, y=-0.002
@@ -348,37 +379,102 @@ class Graph:
         # Display the interactive Plotly figure
         fig.show()
 
-    def find_nodes_with_furthest_connectivity(self):
+    def draw_plotly_network_cluster(self):
         """
-        Find nodes with the furthest connectivity.
+        Draws an interactive plot of the network using Plotly. Clusters each point and colors accordingly.
 
-        This function calculates the nodes with the most significant number of connections 
-        between them on the shortest path.
-
-        Returns:
-        list: List of nodes with furthest connectivity.
+        This function uses Plotly to create an interactive visualization of the network graph.
+        It displays nodes and edges with a spring layout, allowing for zooming and panning.
         """
-        max_connectivity = 0
-        furthest_nodes = []
+        
+        # Calculate node positions using a spring layout
+        pos = nx.spring_layout(self.g, seed=1234)
+        
+        # Initialize lists to hold edge coordinates
+        edge_x = []
+        edge_y = []
 
-        # Perform BFS starting from each node to find shortest paths
-        for node in self.g.nodes():
-            visited = {node}
-            queue = deque([(node, 0)])  # Initialize queue with the node and its distance
-            while queue:
-                current, distance = queue.popleft()
-                for neighbor in self.g.neighbors(current):
-                    if neighbor not in visited:
-                        visited.add(neighbor)
-                        queue.append((neighbor, distance + 1))
-                        # Check if the current distance is the maximum connectivity found so far
-                        if distance + 1 > max_connectivity:
-                            max_connectivity = distance + 1
-                            furthest_nodes = [(node, neighbor)]  # Start new list
-                        elif distance + 1 == max_connectivity:
-                            furthest_nodes.append((node, neighbor))  # Add to existing list
+        # Extract the x and y coordinates for edges
+        for edge in self.g.edges():
+            x0, y0 = pos[edge[0]]
+            x1, y1 = pos[edge[1]]
+            edge_x.extend([x0, x1, None])
+            edge_y.extend([y0, y1, None])
 
-        return furthest_nodes, max_connectivity
+        # Create a Plotly scatter trace for edges
+        edge_trace = go.Scatter(
+            x=edge_x, y=edge_y,
+            line=dict(width=0.5, color='#888'),
+            hoverinfo='none',
+            mode='lines'
+        )
+
+        # Detect communities using the Louvain method
+        partition = community_louvain.best_partition(self.g)
+        
+        # Assign a unique color to each community
+        unique_communities = set(partition.values())
+        num_communities = len(unique_communities)
+        color_palette = px.colors.qualitative.Alphabet * (num_communities // len(px.colors.qualitative.Alphabet) + 1)
+        color_palette = color_palette[:num_communities]
+
+        # Create a Plotly figure with the edge trace
+        fig = go.Figure(data=[edge_trace],
+                        layout=go.Layout(
+                            title='Artist Similarity Network (Clustered)',  # Title of the graph
+                            titlefont_size=16,
+                            showlegend=True,
+                            hovermode='closest',
+                            margin=dict(b=20, l=5, r=5, t=40),  # Margins
+                            annotations=[dict(
+                                text='Clustered Graph',
+                                showarrow=False,
+                                xref="paper", yref="paper",
+                                x=0.005, y=-0.002
+                            )],
+                            xaxis=dict(showgrid=False, zeroline=False, showticklabels=False),  # Hide x-axis grid, line, and ticks
+                            yaxis=dict(showgrid=False, zeroline=False, showticklabels=False)   # Hide y-axis grid, line, and ticks
+                        )
+        )
+
+        # Create a separate node trace for each community
+        for community in unique_communities:
+            community_node_x = []
+            community_node_y = []
+            community_node_text = []
+            community_node_text_hover = []
+
+            for node, comm in partition.items():
+                if comm == community:
+                    x, y = pos[node]
+                    community_node_x.append(x)
+                    community_node_y.append(y)
+                    community_node_text.append('')  # No label
+                    community_node_text_hover.append(node)  # Add label hover only
+
+            # Create a Plotly scatter trace for nodes in this community
+            community_node_trace = go.Scatter(
+                x=community_node_x, y=community_node_y,
+                mode='markers+text',  # Add text mode to display labels
+                hoverinfo='text',
+                marker=dict(
+                    showscale=False,  # Show color scale
+                    color=color_palette[community],  # Set community color
+                    size=7.5,  # Set node size
+                    line=dict(width=0),  # Remove white outline around nodes
+                ),
+                text=community_node_text,  # Text labels for nodes
+                hovertext=community_node_text_hover,  # Hover text labels for nodes
+                textposition='top center',  # Position labels at the top center
+                textfont=dict(color='red'),  # Color labels red
+                name=f'Community {community}'
+            )
+
+            # Add the community node trace to the figure
+            fig.add_trace(community_node_trace)
+
+        # Display the interactive Plotly figure
+        fig.show()
 
 if __name__ == '__main__':
     graph = Graph()
@@ -423,6 +519,13 @@ if __name__ == '__main__':
     artist_1 = 'e-40'
     artist_2 = 'adnan sami'
 
+    # Draws whole network
+    graph.draw_plotly_network()
+    
+    # Draws whole network, clustered
+    graph.draw_plotly_network_cluster()
+
+
     try:
         path = nx.shortest_path(graph.g, source=artist_1, target=artist_2)
         print(f'Shortest path between {artist_1} and {artist_2}:')
@@ -455,8 +558,7 @@ if __name__ == '__main__':
 
         # Plotly visualization path on network
         graph.draw_plotly_network(path=path)
-
-
+        
     except nx.NetworkXNoPath:
         print(f"No path between {artist_1} and {artist_2}")
     except nx.NodeNotFound as e:

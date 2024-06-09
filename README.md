@@ -66,6 +66,7 @@ For detailed usage and additional functionalities, refer to the comments and doc
 
 ![alt text](https://raw.githubusercontent.com/SantiagoEnriqueGA/artist_similarity_network/main/plots/adnan%20sami_to_e-40_plotly.png)
 ![alt text](https://raw.githubusercontent.com/SantiagoEnriqueGA/artist_similarity_network/main/plots/switchfoot_to_taylor%20swift_plotly.png)
+![alt text](https://raw.githubusercontent.com/SantiagoEnriqueGA/artist_similarity_network/main/plots/clustred.png)
 
 
 ## SAS_D3.html
